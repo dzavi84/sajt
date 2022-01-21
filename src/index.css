@@ -36,3 +36,7 @@ nav {
   vertical-align: baseline;
   background: transparent;
 }
+
+body {
+  font-size: Arial, sans-serif;
+}
