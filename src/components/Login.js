@@ -12,6 +12,7 @@ const Login = (props) => {
           <Singin>Sign In!</Singin>
         </div>
       </Nav>
+      <Section>Section!</Section>
     </Container>
   );
 };
@@ -70,6 +71,24 @@ const Singin = styled.a`
     background-color: rgba(255, 7, 58, 0.15);
     color: #ff3131;
     text-decoration: none;
+  }
+`;
+const Section = styled.section`
+  display: flex;
+  align-content: start;
+  min-height: 700px;
+  padding-bottom: 138px;
+  padding-top: 40px;
+  padding: 60px 0;
+  position: relative;
+  flax-wrap: wrap;
+  width: 100%;
+  max-width: 1128px;
+  align-items: center;
+  margin: auto;
+  media(max-width:768px) {
+    margin: auto;
+    min-height: 0px;
   }
 `;
 
