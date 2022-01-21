@@ -12,7 +12,12 @@ const Login = (props) => {
           <Singin>Sign In!</Singin>
         </div>
       </Nav>
-      <Section>Section!</Section>
+      <Section>
+        <Hero>
+          <h1>Welcome to your login page! </h1>
+          <img src='/images/Vecteezy_Geometric-Background_Revisi2-Revisi_RW0320.jpg' />
+        </Hero>
+      </Section>
     </Container>
   );
 };
@@ -34,7 +39,7 @@ const Nav = styled.div`
   b>a(
       width:135px;
       height:34px;
-      media(max-width:768px){
+      @media screen and(max-width:768px){
           padding:0 5px;
       }
 
@@ -86,9 +91,43 @@ const Section = styled.section`
   max-width: 1128px;
   align-items: center;
   margin: auto;
-  media(max-width:768px) {
+  @media screen and (max-width: 768px) {
     margin: auto;
     min-height: 0px;
+  }
+`;
+const Hero = styled.div`
+  width: 80%;
+
+  h1 {
+    text-align: center;
+    padding-bottom: 0;
+    width: 75%;
+    font-size: 56px;
+    color: rgba(255, 7, 58, 0.35);
+    font-weight: 200;
+    line-height: 70px;
+    @media screen and (max-width: 768px) {
+      text-align: center;
+      font-size: 20px;
+      width: 100%;
+      line-height: 2;
+    }
+  }
+
+  img {
+    z-index: -1;
+    width: 700px;
+    height: 670px;
+    position: absolute;
+    bottom: -2px;
+    right: -150px;
+    @media screen and (max-width: 768px) {
+      top: 230px;
+      width: -webkit-fill-available;
+      position: initial;
+      height: initial;
+    }
   }
 `;
 
