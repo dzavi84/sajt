@@ -28,7 +28,7 @@ li,
 ul,
 header,
 nav {
-  margin: 0;
+  margin: 2px;
   padding: 3px;
   border: none;
   outline: none;
