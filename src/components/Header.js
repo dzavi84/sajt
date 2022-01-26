@@ -6,9 +6,27 @@ const Header = (props) => {
       <Content>
         <Logo>
           <a href='/home'>
-            <img src='/images/044482e2.svg' />
+            <img src='/images/044482e2-removebg-preview.png' />
           </a>
         </Logo>
+        <Search>
+          <div>
+            <input type='text' placeholder='Search' />
+            <SearchIcon>
+              <svg
+                xmlns='http://www.w3.org/2000/svg'
+                viewBox='0 0 16 16'
+                data-supported-dps='16x16'
+                fill='currentColor'
+                width='16'
+                height='16'
+                focusable='false'
+              >
+                <path d='M14.56 12.44L11.3 9.18a5.51 5.51 0 10-2.12 2.12l3.26 3.26a1.5 1.5 0 102.12-2.12zM3 6.5A3.5 3.5 0 116.5 10 3.5 3.5 0 013 6.5z'></path>
+              </svg>
+            </SearchIcon>
+          </div>
+        </Search>
       </Content>
     </Container>
   );
@@ -27,14 +45,40 @@ const Container = styled.div`
 const Content = styled.div`
   display: flex;
   align-items: center;
-  margin: 0 auto;
+  margin: -10px;
   min-height: 100%;
   max-width: 1128px;
 `;
 const Logo = styled.span`
-  margin-left: 0px;
-  margin-top: 0px;
   font-size: 0px;
+  margin-right: 8px;
+  margin-top: -8px;
+  max-width: 34px;
+  max-height: 34px;
 `;
+const Search = styled.div`
+  opacity: 1;
+  flex-grow: 1;
+  position: relative;
+  & > div {
+    max-width: 280px;
+    input {
+      border: none;
+      box-shadow: none;
+      background-color: #eef3f8;
+      border-radius: 2px;
+      color: rgba(0, 0, 0, 0.9);
+      width: 218px;
+      padding: o 8px o 40px;
+      line-height: 1.75;
+      font-weight: 400;
+      font-size: 14px;
+      height: 34px;
+      border-color: #dc06f1;
+      vertical-align: text-top;
+    }
+  }
+`;
+const SearchIcon = styled.div``;
 
 export default Header;

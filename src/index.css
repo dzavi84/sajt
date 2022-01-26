@@ -6,7 +6,7 @@ body {
 :root,
 body,
 html {
-  background-color: white;
+  background-color: rgba(211, 211, 211, 0.1);
   box-sizing: border-box;
 }
 
