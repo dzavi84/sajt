@@ -6,7 +6,7 @@ const Header = (props) => {
       <Content>
         <Logo>
           <a href='/home'>
-            <img src='/images/Tigropolis_logo.png' />
+            <img src='/images/044482e2.svg' />
           </a>
         </Logo>
       </Content>
@@ -18,7 +18,7 @@ const Container = styled.div`
   background-color: white;
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
   left: 0;
-  padding: 0 24px;
+  padding: 0px;
   position: fixed;
   top: 0;
   width: 100vw;
@@ -31,6 +31,10 @@ const Content = styled.div`
   min-height: 100%;
   max-width: 1128px;
 `;
-const Logo = styled.div``;
+const Logo = styled.span`
+  margin-left: 0px;
+  margin-top: 0px;
+  font-size: 0px;
+`;
 
 export default Header;
