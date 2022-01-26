@@ -6,7 +6,7 @@ const Header = (props) => {
       <Content>
         <Logo>
           <a href='/home'>
-            <img src='/images/044482e2-removebg-preview.png' />
+            <img className='logo' src='/images/044482e2-removebg-preview.png' />
           </a>
         </Logo>
         <Search>
@@ -69,7 +69,7 @@ const Search = styled.div`
       border-radius: 2px;
       color: rgba(0, 0, 0, 0.9);
       width: 218px;
-      padding: o 8px o 40px;
+      padding: 0 8px 0 40px;
       line-height: 1.75;
       font-weight: 400;
       font-size: 14px;
@@ -79,6 +79,13 @@ const Search = styled.div`
     }
   }
 `;
-const SearchIcon = styled.div``;
+const SearchIcon = styled.div`
+  width: 40px;
+  position: absolute;
+  z-index: 1;
+  top: 13px;
+  left: 10px;
+  border-radius: 0 2px 2px 0;
+`;
 
 export default Header;
