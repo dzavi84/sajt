@@ -19,10 +19,34 @@ const Header = (props) => {
         </Search>
         <Nav>
           <NavListWrap>
-            <NavList>
+            <NavList className='active'>
               <a>
                 <img src='/images/nav-home.svg' />
                 <span>Home</span>
+              </a>
+            </NavList>
+            <NavList>
+              <a>
+                <img src='/images/nav-network.svg' />
+                <span>My Network</span>
+              </a>
+            </NavList>
+            <NavList>
+              <a>
+                <img src='/images/nav-jobs.svg' />
+                <span>Jobs</span>
+              </a>
+            </NavList>
+            <NavList>
+              <a>
+                <img src='/images/nav-messaging.svg' />
+                <span>Messaging</span>
+              </a>
+            </NavList>
+            <NavList>
+              <a>
+                <img src='/images/nav-notifications.svg' />
+                <span>Notifications</span>
               </a>
             </NavList>
           </NavListWrap>
@@ -94,7 +118,7 @@ const SearchIcon = styled.div`
 `;
 const Nav = styled.nav`
   margin-left: auto;
-  display: block;
+  display: flex;
   @media (max-width: 768px) {
     position: fixed;
     left: 0;
@@ -108,12 +132,25 @@ const NavListWrap = styled.ul`
   display: contents;
   flax-wrap: nowrap;
   list-style-type: none;
+
+  .active {
+    span:after {
+      content: '';
+      transform: scaleX(1);
+      border-bottom: 2px solid var(..white, #fff);
+      bottom: 0;
+      left: 0;
+      position: absolute;
+      width: 100%;
+      border-color: rgba(0, 0, 0, 0.9);
+    }
 `;
 
 const NavList = styled.li`
   margin: -7px;
   display: flex;
   align-item: center;
+
   a {
     display: flex;
 
