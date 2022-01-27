@@ -13,20 +13,19 @@ const Header = (props) => {
           <div>
             <input type='text' placeholder='Search' />
             <SearchIcon>
-              <svg
-                xmlns='http://www.w3.org/2000/svg'
-                viewBox='0 0 16 16'
-                data-supported-dps='16x16'
-                fill='currentColor'
-                width='16'
-                height='16'
-                focusable='false'
-              >
-                <path d='M14.56 12.44L11.3 9.18a5.51 5.51 0 10-2.12 2.12l3.26 3.26a1.5 1.5 0 102.12-2.12zM3 6.5A3.5 3.5 0 116.5 10 3.5 3.5 0 013 6.5z'></path>
-              </svg>
+              <img src='/images/search-icon.svg' />
             </SearchIcon>
           </div>
         </Search>
+        <Nav>
+          <NavListWrap>
+            <NavList>
+              <a>
+                <img src='/images/nav-home.svg' />
+              </a>
+            </NavList>
+          </NavListWrap>
+        </Nav>
       </Content>
     </Container>
   );
@@ -83,9 +82,57 @@ const SearchIcon = styled.div`
   width: 40px;
   position: absolute;
   z-index: 1;
-  top: 13px;
+  top: 10px;
   left: 10px;
   border-radius: 0 2px 2px 0;
+  margin: 0;
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+const Nav = styled.nav`
+  margin-left: auto;
+  display: block;
+  @media (max-width: 768px) {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    background: white;
+    width: 100%;
+  }
+`;
+
+const NavListWrap = styled.ul`
+  display: flex;
+  flax-wrap: nowrap;
+  list-style-type: none;
+`;
+
+const NavList = styled.li`
+  display: flex;
+  align-item: center;
+  a {
+    align-items: center;
+    background: transparent;
+    flex-direction: column;
+    font-size: 12px;
+    font-weight: 400;
+    justify-content: center;
+    line-height: 1.5;
+    min-height: 52px;
+    min-width: 80px;
+    position: relative;
+    text-decoration: none;
+    span {
+      color: rgba(0, 0, 0, 0.6);
+      display: flex;
+      align-items: center;
+    }
+    @media (max-width: 7868px) {
+      min-width: 70px;
+    }
+  }
 `;
 
 export default Header;
