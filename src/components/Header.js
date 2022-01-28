@@ -49,6 +49,24 @@ const Header = (props) => {
                 <span>Notifications</span>
               </a>
             </NavList>
+            <User>
+              <a>
+                <img src='/images/user.svg' />
+                <span>
+                  Me
+                  <img src='/images/down-icon.svg' />
+                </span>
+              </a>
+            </User>
+            <Work>
+              <a>
+                <img src='/images/nav-work.svg' />
+                <span>
+                  Work
+                  <img src='/images/down-icon.svg' />
+                </span>
+              </a>
+            </Work>
           </NavListWrap>
         </Nav>
       </Content>
@@ -118,7 +136,7 @@ const SearchIcon = styled.div`
 `;
 const Nav = styled.nav`
   margin-left: auto;
-  display: flex;
+  display: blok;
   @media (max-width: 768px) {
     position: fixed;
     left: 0;
@@ -129,7 +147,7 @@ const Nav = styled.nav`
 `;
 
 const NavListWrap = styled.ul`
-  display: contents;
+  display: flex;
   flax-wrap: nowrap;
   list-style-type: none;
 
@@ -137,13 +155,16 @@ const NavListWrap = styled.ul`
     span:after {
       content: '';
       transform: scaleX(1);
-      border-bottom: 2px solid var(..white, #fff);
+      border-bottom: 2px solid var(--white, #fff);
       bottom: 0;
+      background-color: red;
+      transition: transform 0.2s ease-in-out;
       left: 0;
       position: absolute;
       width: 100%;
       border-color: rgba(0, 0, 0, 0.9);
     }
+  }
 `;
 
 const NavList = styled.li`
@@ -183,4 +204,14 @@ const NavList = styled.li`
     }
   }
 `;
+const User = styled(NavList)`
+  a > svg {
+    width: 24px;
+    border-radius: 50%;
+  }
+  a > img {
+    width: 24px;
+  }
+`;
+const Work = styled(User)``;
 export default Header;
