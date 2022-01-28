@@ -1,4 +1,7 @@
 import styled from 'styled-components';
+import LeftSide from './LeftSide';
+import Main from './Main';
+import RightSide from './RightSide';
 
 const Home = (props) => {
   return (
@@ -12,6 +15,11 @@ const Home = (props) => {
           Find Talented pros in record with Upwork and keep business moving.
         </p>
       </Section>
+      <Layout>
+        <LeftSide />
+        <Main />
+        <RightSide />
+      </Layout>
     </Container>
   );
 };
@@ -52,4 +60,20 @@ const Content = styled.div`
   margin-left: auto;
   margin-right: auto;
 `;
+const Layout = styled.div`
+  display: grid;
+  grid-template-areas: 'Leftside main rightside';
+  grid-template-columns: minmax(0, 12fr) minmax(0, 5fr) minmax(300px, 7fr);
+  column-gap: 25px;
+  row-gap: 25px;
+  grid-template-row: auto;
+  margin: 25px 0;
+
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    padding: 0 5px;
+  }
+`;
+
 export default Home;
