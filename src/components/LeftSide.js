@@ -14,6 +14,20 @@ const LeftSide = (props) => {
             <AddPhotoText>Add a photo</AddPhotoText>
           </a>
         </UserInfo>
+        <Widget>
+          <a>
+            <div>
+              <span>Connections</span>
+              <span>Grow your Network</span>
+            </div>
+            <img src='/images/widget-icon.svg' />
+          </a>
+        </Widget>
+        <Item>
+          <span>
+            <img src='/images/item-icon.svg' />
+          </span>
+        </Item>
       </ArtCard>
     </Container>
   );
@@ -75,5 +89,7 @@ const AddPhotoText = styled.div`
   line-height: 1.33;
   font-weight: 400;
 `;
+const Widget = styled.div``;
+const Item = styled.div``;
 
 export default LeftSide;
