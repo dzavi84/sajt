@@ -34,7 +34,7 @@ const LeftSide = (props) => {
 };
 
 const Container = styled.div`
-  grid-area: LeftSide;
+  grid-area: auto;
 `;
 
 const ArtCard = styled.div`
@@ -89,7 +89,40 @@ const AddPhotoText = styled.div`
   line-height: 1.33;
   font-weight: 400;
 `;
-const Widget = styled.div``;
+const Widget = styled.div`
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  padding-top: 12px;
+  padding-bottom: 12px;
+  & > a {
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 12px;
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.08);
+    }
+    div {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+      span {
+        font-size: 12px;
+        line-height: 1.333;
+        font-weight: 600;
+        &:first-child {
+          color: rgba(0, 0, 0, 0.6);
+        }
+        &:nth-child(2) {
+          color: rgba(0, 0, 0, 1);
+        }
+      }
+    }
+  }
+  svg {
+    color: rgba(0, 0, 0, 1);
+  }
+`;
 const Item = styled.div``;
 
 export default LeftSide;
