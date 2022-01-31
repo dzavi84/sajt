@@ -5,7 +5,7 @@ const Login = (props) => {
     <Container>
       <Nav>
         <a href='/'>
-          <img src='/images/044482e2-removebg-preview.png' />
+          <img className='tigre' src='/images/044482e2-removebg-preview.png' />
         </a>
         <div>
           <Join>Join Now!</Join>
@@ -33,6 +33,9 @@ const Container = styled.div`
 `;
 
 const Nav = styled.nav`
+  .tigre {
+    width: 24px;
+  }
   max-width: 1128px;
   margin: auto;
   padding: 12px 0 16px;

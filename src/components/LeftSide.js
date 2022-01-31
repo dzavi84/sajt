@@ -26,6 +26,7 @@ const LeftSide = (props) => {
         <Item>
           <span>
             <img src='/images/item-icon.svg' />
+            My Items
           </span>
         </Item>
       </ArtCard>
@@ -119,10 +120,24 @@ const Widget = styled.div`
       }
     }
   }
-  svg {
+  img {
     color: rgba(0, 0, 0, 1);
   }
 `;
-const Item = styled.div``;
+const Item = styled.div`
+  border-color: rgba(0, 0, 0, 0.8);
+  text-align: left;
+  padding: 12px;
+  font-size: 12px;
+  display: block;
+  span {
+    display: flex;
+    align-items: center;
+    color: rgba(0, 0, 0, 1);
+    img {
+      color: (0, 0, 0, 0.6);
+    }
+  }
+`;
 
 export default LeftSide;
