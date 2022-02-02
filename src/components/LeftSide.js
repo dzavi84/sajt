@@ -56,7 +56,7 @@ const Container = styled.div`
 `;
 
 const ArtCard = styled.div`
-  width: fit-content;
+  width: auto;
   text-align: center;
   overflow: hidden;
   margin-bottom: 8px;
