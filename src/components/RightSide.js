@@ -86,7 +86,7 @@ const FeedList = styled.ul`
   }
 `;
 const Avatar = styled.div`
-  background-image: url();
+  background-image: url('/images/hashtag-icon-png-20.jpg');
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
