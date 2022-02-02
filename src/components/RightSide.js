@@ -28,18 +28,23 @@ const RightSide = (props) => {
             </div>
           </li>
         </FeedList>
+        <Recommendation>View all recommendation</Recommendation>
+        <img src='/images/right-icon.svg' />
       </FollowCard>
+      <BannerCard>
+        <img className='bannerimage' src='/images/PngItem_5101222.png' />
+      </BannerCard>
     </Container>
   );
 };
 
 const Container = styled.div`
-  grid-area: RightSide;
+  grid-area: rightSide;
 `;
 const FollowCard = styled.div`
   text-align: center;
   overflow: hidden;
-  margin-bottom: 38px;
+  margin-bottom: 8px;
   background-color: #fff;
   border-radius: 5px;
   position: relative;
@@ -92,6 +97,18 @@ const Avatar = styled.div`
   background-repeat: no-repeat;
   width: 48px;
   height: 48px;
-  margin-right: 8px;
+  margin-right: 8 px;
+`;
+const Recommendation = styled.div`
+  color: #0a66c2;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+`;
+const BannerCard = styled(FollowCard)`
+  .bannerimage {
+    height: 300px;
+    width: 250px;
+  }
 `;
 export default RightSide;
