@@ -39,7 +39,7 @@ const RightSide = (props) => {
 };
 
 const Container = styled.div`
-  grid-area: rightSide;
+  grid-area: rightside;
 `;
 const FollowCard = styled.div`
   text-align: center;
